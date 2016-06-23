@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <meta charset="utf-8">
+    <title>Turntable player</title>
+    
+  </head>
+  <body style="height: 100%; ">
+    <div id="header">
+      <h1>Header!</h1>
+    </div>
+    <div id="container" style="display:flex; flex-grow:1; height: 100%; ">
+      <h2>Center</h2>
+    </div>
+
+    <div id="footer">
+      <h2>Footer!</h2>
+    </div>
+    
+    <script src="https://fb.me/react-15.1.0.js"></script>
+    <script src="https://fb.me/react-dom-15.1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+    <!-- \f002 -->
+    <script type="text/babel">
+      var Container = React.createClass({
+        render: function () {
+          return (
+            <div  style={{display: 'flex', width: 100 + '%'}}>
+              <article style={{width: 100 + '%'}}>Center</article>
+              <aside style={{width: 200 + 'px'}}>Right</aside>
+            </div>
+          );
+        }
+      });
+
+      var Header = React.createClass({
+        render: function () {
+          return (
+            <div  style={{display: 'flex', alignItems: 'center', height: 50 + 'px' }}>
+              <span style={{flexGrow: 1}}>Logo?</span>
+              <span style={{flexGrow: 1}}>Now Playing</span>
+              <span style={{flexGrow: 1}}>Library</span>
+              <span style={{flexGrow: 1}}>Settings</span>
+              <span style={{flexGrow: 8}}></span>
+              <input type="text" name="search-box" style={{flexGrow: 8}}/>
+              <span>  🔍 </span>
+            </div>
+          );
+        }
+      });
+
+      var Footer = React.createClass({
+        render: function(){
+          return (
+            <div style={{height: 100 + 'px'}}>
+              play button and stuff
+            </div>
+          );
+        }
+      });
+      
+      ReactDOM.render(
+        <Container />,
+        document.getElementById('container')
+      );
+      ReactDOM.render(
+        <Header />,
+        document.getElementById('header')
+      );
+      ReactDOM.render(
+        <Footer />,
+        document.getElementById('footer')
+      );
+    </script>
+  </body>
+</html>
