@@ -41,7 +41,9 @@ var Album = React.createClass({
   render: function(){
     return (
       <div className="float album">
-        <div className="overlay"></div>
+        <div className="overlay">
+          <div className="play-button"></div>
+        </div>
         <img src="https://duckduckgo.com/i/860ecea4.jpg"/>
         <div className="name">ALbum Name</div>
         <div className="band">Band Name</div>
