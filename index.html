@@ -19,59 +19,8 @@
     <script src="https://fb.me/react-15.1.0.js"></script>
     <script src="https://fb.me/react-dom-15.1.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-    <!-- \f002 -->
-    <script type="text/babel">
-      var Container = React.createClass({
-        render: function () {
-          return (
-            <div>
-              <article style={{width: 100 + '%'}}>Center</article>
-              <aside style={{width: 200 + 'px'}}>Right</aside>
-            </div>
-          );
-        }
-      });
-
-      var Header = React.createClass({
-        render: function () {
-          return (
-            <div className="nav-menu">
-              <span className="nav-item-1">Logo?</span>
-              <span className="nav-item-1">Now Playing</span>
-              <span className="nav-item-1">Library</span>
-              <span className="nav-item-1">Settings</span>
-              <span className="nav-item-8"></span>
-              <div className="nav-item-8 search-box">
-                <input type="text" name="search-box" />
-              </div>
-            </div>
-          );
-        }
-      });
-
-      var Footer = React.createClass({
-        render: function(){
-          return (
-            <div>
-              play button and stuff
-            </div>
-          );
-        }
-      });
-      
-      ReactDOM.render(
-        <Container />,
-        document.getElementById('container')
-      );
-      ReactDOM.render(
-        <Header />,
-        document.getElementById('header')
-      );
-      ReactDOM.render(
-        <Footer />,
-        document.getElementById('footer')
-      );
-    </script>
-
+    
+    <script type="text/babel" src="./js/src/components.js"></script>
+    
   </body>
 </html>
