@@ -41,8 +41,9 @@
               <span className="nav-item-1">Library</span>
               <span className="nav-item-1">Settings</span>
               <span className="nav-item-8"></span>
-              <input type="text" name="search-box" className="nav-item-8"/>
-              <span>  🔍 </span>
+              <div className="nav-item-8 search-box">
+                <input type="text" name="search-box" />
+              </div>
             </div>
           );
         }
@@ -51,7 +52,7 @@
       var Footer = React.createClass({
         render: function(){
           return (
-            <div style={{height: 100 + 'px'}}>
+            <div>
               play button and stuff
             </div>
           );
