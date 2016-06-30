@@ -31,7 +31,13 @@ var Footer = React.createClass({
   render: function(){
     return (
       <div>
-        play button and stuff
+        <img src="https://duckduckgo.com/i/860ecea4.jpg"/>
+        <span>Shuffle</span>
+        <span>prv</span>
+        <span>ply</span>
+        <span>nxt</span>
+        <span>time/tot-time</span>
+        <span>vol</span>
       </div>
     );
   }
@@ -45,8 +51,8 @@ var Album = React.createClass({
           <div className="play-button"></div>
         </div>
         <img src="https://duckduckgo.com/i/860ecea4.jpg"/>
-        <div className="name">ALbum Name</div>
-        <div className="band">Band Name</div>
+        <div className="name link">ALbum Name</div>
+        <div className="band link">Band Name</div>
       </div>
     );
   }
@@ -57,6 +63,36 @@ var Albums = React.createClass({
     return (
       <div className="clearfix" >
         <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+          <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+          <Album />
         <Album />
         <Album />
         <Album />
