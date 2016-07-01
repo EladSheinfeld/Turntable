@@ -2,10 +2,12 @@
 Simple media player using ReactJS
 
 ## TODO:
-###Client side
+
+### Client side
 * Add router
 * Split components into files and use webpacks
 * Design player
 * Make Player work
-###Server Side
+
+### Server Side
 * add server :)
