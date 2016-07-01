@@ -1,0 +1,44 @@
+// "main": "styles.less"
+@text-color: #6f6f6f;
+@dark-text-color: @text-color - #292929;
+@light-text-color: #969696;
+@light-border-color: #c9c9c9;
+@light-background: #f9fffd;
+@dark-action-button: #e4601f;
+@light-action-button: #fabf66;
+
+@font-size: 18px;
+@small-font: @font-size - 4px;
+@smaller-font: @small-font - 2px;
+
+
+html, body { height: 100%; }
+body {
+	 color:@text-color;
+	 background-image: svg-gradient(to bottom right, #e4e4e4, #c4dfd6);
+	 font-family: "proxima-nova",sans-serif;
+	 font-size: @font-size;
+}
+
+.clearfix {
+  &:before, &:after{ content:""; }
+  &:after{ clear: both; }
+}
+
+.float {
+	float: left;
+}
+
+.link {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.img-large{
+	height: 200px;
+}
+
+.img-small{
+	height: 75px;
+}

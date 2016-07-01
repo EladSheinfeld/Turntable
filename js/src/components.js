@@ -40,11 +40,11 @@ var Footer = React.createClass({
   render: function(){
     return (
       <Box>
-        <img src="https://duckduckgo.com/i/860ecea4.jpg"/>
+        <img className="img-small" src="https://duckduckgo.com/i/860ecea4.jpg"/>
         <span>Shuffle</span>
-        <span>prv</span>
-        <span>ply</span>
-        <span>nxt</span>
+        <div className="player-btn play-button"></div>
+        <div className="player-btn play-button"></div>
+        <div className="player-btn nxt-button"></div>
         <span>time/tot-time</span>
         <span>vol</span>
       </Box>
@@ -57,9 +57,9 @@ var Album = React.createClass({
     return (
       <Box className="float album">
         <div className="overlay">
-          <div className="play-button"></div>
+          <div className="player-btn play-button"></div>
         </div>
-        <img src={this.props.data.imgUrl}/>
+        <img className="img-large" src={this.props.data.imgUrl}/>
         <div className="name link">{this.props.data.albumName}</div>
         <div className="band link">{this.props.data.bandName}</div>
       </Box>
