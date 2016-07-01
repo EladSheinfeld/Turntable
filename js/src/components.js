@@ -1,11 +1,20 @@
+var Box  = React.createClass({
+  render: function() {
+    return (
+      <div className={this.props.className}>
+          {this.props.children}
+      </div>
+    );
+  }
+});
 var Container = React.createClass({
   render: function () {
     return (
-      <div>
+      <Box>
         <article id="left-container" style={{width: 100 + '%'}}>
         </article>
         <aside style={{width: 200 + 'px'}}>Right</aside>
-      </div>
+      </Box>
     );
   }
 });
@@ -13,7 +22,7 @@ var Container = React.createClass({
 var Header = React.createClass({
   render: function () {
     return (
-      <div className="nav-menu">
+      <Box className="nav-menu">
         <span className="nav-item-1">Logo?</span>
         <span className="nav-item-1">Now Playing</span>
         <span className="nav-item-1">Library</span>
@@ -22,7 +31,7 @@ var Header = React.createClass({
         <div className="nav-item-8 search-box">
           <input type="text" name="search-box" />
         </div>
-      </div>
+      </Box>
     );
   }
 });
@@ -30,7 +39,7 @@ var Header = React.createClass({
 var Footer = React.createClass({
   render: function(){
     return (
-      <div>
+      <Box>
         <img src="https://duckduckgo.com/i/860ecea4.jpg"/>
         <span>Shuffle</span>
         <span>prv</span>
@@ -38,7 +47,7 @@ var Footer = React.createClass({
         <span>nxt</span>
         <span>time/tot-time</span>
         <span>vol</span>
-      </div>
+      </Box>
     );
   }
 });
@@ -46,66 +55,43 @@ var Footer = React.createClass({
 var Album = React.createClass({
   render: function(){
     return (
-      <div className="float album">
+      <Box className="float album">
         <div className="overlay">
           <div className="play-button"></div>
         </div>
-        <img src="https://duckduckgo.com/i/860ecea4.jpg"/>
-        <div className="name link">ALbum Name</div>
-        <div className="band link">Band Name</div>
-      </div>
+        <img src={this.props.data.imgUrl}/>
+        <div className="name link">{this.props.data.albumName}</div>
+        <div className="band link">{this.props.data.bandName}</div>
+      </Box>
     );
   }
 });
 
 var Albums = React.createClass({
   render: function(){
+    var albums = this.props.data.map(function(album) {
+      return (
+          <Album data={album} />
+        );
+      });
     return (
-      <div className="clearfix" >
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-          <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-          <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-        <Album />
-      </div>
+      <Box className="clearfix" >
+        {albums}
+      </Box>
     );
   }
 });
+
+var albumsModel = [
+  {id: 1, bandName: "Band Name", albumName: "Album Name", imgUrl: "https://duckduckgo.com/i/860ecea4.jpg"},
+  {id: 2, bandName: "Band Name", albumName: "Album Name", imgUrl: "https://duckduckgo.com/i/860ecea4.jpg"},
+  {id: 3, bandName: "Band Name", albumName: "Album Name", imgUrl: "https://duckduckgo.com/i/860ecea4.jpg"},
+  {id: 4, bandName: "Band Name", albumName: "Album Name", imgUrl: "https://duckduckgo.com/i/860ecea4.jpg"},
+  {id: 5, bandName: "Band Name", albumName: "Album Name", imgUrl: "https://duckduckgo.com/i/860ecea4.jpg"},
+  {id: 6, bandName: "Band Name", albumName: "Album Name", imgUrl: "https://duckduckgo.com/i/860ecea4.jpg"},
+  {id: 7, bandName: "Band Name", albumName: "Album Name", imgUrl: "https://duckduckgo.com/i/860ecea4.jpg"},
+  {id: 8, bandName: "Band Name", albumName: "Album Name", imgUrl: "https://duckduckgo.com/i/860ecea4.jpg"}
+];
 
 ReactDOM.render(
   <Container />,
@@ -120,6 +106,6 @@ ReactDOM.render(
   document.getElementById('footer')
 );
 ReactDOM.render(
-  <Albums />,
+  <Albums data={albumsModel}/>,
   document.getElementById('left-container')
 );
