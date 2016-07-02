@@ -39,12 +39,13 @@ var Header = React.createClass({
 var Footer = React.createClass({
   render: function(){
     return (
-      <Box>
-        <img className="img-small" src="https://duckduckgo.com/i/860ecea4.jpg"/>
-        <span>Shuffle</span>
-        <div className="player-btn play-button"></div>
-        <div className="player-btn play-button"></div>
-        <div className="player-btn nxt-button"></div>
+      <Box className="player">
+        <img className="img-small player-album" src="https://duckduckgo.com/i/860ecea4.jpg"/>
+        <div className="player-controls">
+          <div className="player-btn prv-button"></div>
+          <div className="player-btn play-button large-button"></div>
+          <div className="player-btn nxt-button"></div>
+        </div>
         <span>time/tot-time</span>
         <span>vol</span>
       </Box>

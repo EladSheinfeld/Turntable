@@ -1,6 +1,9 @@
 // "out": "../css/styles.css", "compress": true
 @import "common-styles.less";
+@import "mixins.less";
 @import "navigation.less";
+@import "player.less";
+@import "album.less";
 
 #container {
 	padding: 10px;
@@ -22,105 +25,5 @@
 	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.26);
 	.player-btn{
 		display: inline-block;
-	}
-}
-
-.album {
-	width: 200px;
-	height: 250px;
-	margin: 0 20px 20px 0;
-	background-color: @light-background;
-	border-radius: 5px;
-	border-width: 1px;
-    border-style: solid;
-    border-color: rgba(35, 35, 35, 0.0980392);
-    overflow: hidden;
-    cursor: pointer;
-	transition: box-shadow 0.3s;
-    &:hover {
- 		box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
- 		.overlay {
- 			opacity: 1;
-	    }
-    }
-
-    .name {
-    	font-size: @small-font;
-    	color: @dark-text-color;
-    	padding: 3px 5px;
-    	text-overflow: ellipsis;
-    	white-space: nowrap;
-    	overflow: hidden;
-    }
-
-    .band {
-		font-size: @smaller-font;
-		color: @light-text-color;
-		padding: 3px 5px;
-	    text-overflow: ellipsis;
-    	white-space: nowrap;
-    	overflow: hidden;
-    }
-
-    .overlay {
-    	position:absolute;
-		height: 250px;
-		width: 200px;
-    	opacity: 0;
-    	transition: opacity 0.3s;
-    	pointer-events: none;
-
-    	.player-btn{
-    		position: relative;
-    		top: 100px;
-	    }
-    }
-}
-
-.player-btn{
-	height: 50px;
-	width: 50px;
-	margin: 0 auto;
-	background-color: @light-background;
-	line-height: 50px;
-	border-radius: 25px;
-	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
-}
-
-.triangle-base() {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
-
-.play-button{
-	&:after {
-		.triangle-base();
-		border-top: 25px solid @dark-action-button;
-		border-left: 15px solid transparent;
-		border-right: 15px solid transparent;
-		border-bottom: none;
-		transform: rotate(270deg);
-		margin-top: 12px;
-		margin-left: 12px;
-
-	}
-}
-.nxt-button{
-	&:before,&:after {
-		.triangle-base();
-    border-top: 15px solid @dark-action-button;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: none;
-    transform: rotate(270deg);
-	}
-	&:before{
-		margin-left: 8px;
-	}
-	&:after{
-		margin-left: -4px;
 	}
 }

@@ -1,0 +1,18 @@
+// "main": "styles.less"
+.triangle-base() {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.triangle(@direction, @sizeH, @sizeV, @color) when (@direction = right) {
+    .triangle-base();
+    border-width: @sizeV 0 @sizeV @sizeH;
+    border-color: transparent transparent transparent @color;
+}
+.triangle(@direction, @sizeH, @sizeV, @color) when (@direction = left) {
+    .triangle-base();
+    border-width: @sizeV @sizeH @sizeV 0;
+    border-color: transparent @color transparent transparent;
+}

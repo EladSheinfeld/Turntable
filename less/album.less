@@ -1,0 +1,52 @@
+// "main": "styles.less"
+.album {
+	width: 200px;
+	height: 250px;
+	margin: 0 20px 20px 0;
+	background-color: @light-background;
+	border-radius: 5px;
+	border-width: 1px;
+    border-style: solid;
+    border-color: rgba(35, 35, 35, 0.0980392);
+    overflow: hidden;
+    cursor: pointer;
+	transition: box-shadow 0.3s;
+    &:hover {
+ 		box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.45);
+ 		.overlay {
+ 			opacity: 1;
+	    }
+    }
+
+    .name {
+    	font-size: @small-font;
+    	color: @dark-text-color;
+    	padding: 3px 5px;
+    	text-overflow: ellipsis;
+    	white-space: nowrap;
+    	overflow: hidden;
+    }
+
+    .band {
+		font-size: @smaller-font;
+		color: @light-text-color;
+		padding: 3px 5px;
+	    text-overflow: ellipsis;
+    	white-space: nowrap;
+    	overflow: hidden;
+    }
+
+    .overlay {
+    	position:absolute;
+		height: 250px;
+		width: 200px;
+    	opacity: 0;
+    	transition: opacity 0.3s;
+    	pointer-events: none;
+
+    	.player-btn{
+    		position: relative;
+    		top: 100px;
+	    }
+    }
+}
