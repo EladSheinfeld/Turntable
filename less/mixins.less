@@ -16,3 +16,22 @@
     border-width: @sizeV @sizeH @sizeV 0;
     border-color: transparent @color transparent transparent;
 }
+.triangle(@direction, @sizeH, @sizeV, @color) when (@direction = left) {
+    .triangle-base();
+    border-width: @sizeV @sizeH @sizeV 0;
+    border-color: transparent @color transparent transparent;
+}
+.triangle(@direction, @sizeH, @sizeV, @color) when (@direction = bottomright) {
+    .triangle-base();
+    border-width: 0 0 @sizeH @sizeV;
+    border-color: transparent transparent @color transparent;
+}
+.triangle(@direction, @sizeH, @sizeV, @color) when (@direction = topleft) {
+    .triangle-base();
+    border-width: @sizeH @sizeV 0 0;
+    border-color: @color transparent transparent transparent;
+}
+
+.shadow(@shadow-size,@shadow-blur,@shadow-color) {
+	box-shadow: @shadow-size @shadow-size @shadow-blur @shadow-color, 0px 0px @shadow-size lighten(@shadow-color,5%);
+}

@@ -40,14 +40,22 @@ var Footer = React.createClass({
   render: function(){
     return (
       <Box className="player">
-        <img className="img-small player-album" src="https://duckduckgo.com/i/860ecea4.jpg"/>
-        <div className="player-controls">
+        <div className="player-left in-flex">
+          <img className="img-small player-album" src="https://duckduckgo.com/i/860ecea4.jpg"/>
+          <div className="track-title scroll-left">
+            <p>Foo Fightres - This is the last song</p>
+          </div>
+        </div>
+
+        <div className="player-controls in-flex">
           <div className="player-btn prv-button"></div>
           <div className="player-btn play-button large-button"></div>
           <div className="player-btn nxt-button"></div>
         </div>
-        <span>time/tot-time</span>
-        <span>vol</span>
+        <div className="player-right in-flex">
+          <span className="timer">02:15/05:14</span>
+          <input type="range" className="volume"/>
+        </div>
       </Box>
     );
   }

@@ -3,6 +3,7 @@
 @dark-text-color: @text-color - #292929;
 @light-text-color: #969696;
 @light-border-color: #c9c9c9;
+@dark-border-color: @dark-text-color;
 @light-background: #f9fffd;
 @dark-action-button: #e4601f;
 @light-action-button: #fabf66;
@@ -28,6 +29,9 @@ body {
 .float {
 	float: left;
 }
+.float-right {
+	float: right;
+}
 
 .link {
 	&:hover {
@@ -41,4 +45,9 @@ body {
 
 .img-small{
 	height: 75px;
+}
+
+.in-flex{
+	display: inline-flex;
+	align-items: center;
 }
